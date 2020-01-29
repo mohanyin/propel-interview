@@ -1,0 +1,113 @@
+@import "reset";
+
+$color-white: white;
+$color-light: #DEDED1;
+$color-orange: #EC8D27;
+$color-orange-dark: #DF6326;
+$color-green: #019C86;
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: $color-white;
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+
+p {
+  color: $color-white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+button {
+  height: 48px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.38px;
+  color: $color-white;
+  background-color: $color-orange;
+  border-bottom: 2px solid $color-orange-dark;
+  padding: 0 16px;
+}
+
+select {
+  height: 48px;
+  background: $color-white;
+  border-radius: 2px;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: -0.38px;
+  border-bottom: 2px solid $color-light;
+  padding: 0 16px;
+}
+
+.apply-usa-page__background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.25) 12.03%, rgba(0, 0, 0, 0.5) 97.29%), url("/images/apply_usa_photo.jpg");
+  background-position: center;
+  z-index: -1;
+}
+
+.apply-usa-page__content {
+  padding: 40px;
+  max-width: 580px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-usa-page__main-section {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apply-usa-page__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.apply-usa-page__form__submit-button {
+  margin-top: 16px;
+
+  @media (min-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.apply-usa-page__fine-print {
+  flex: none;
+}
+
+.apply-usa-page__loading-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.553622);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply-usa-page__loading-spinner__image {
+  width: 200px;
+}

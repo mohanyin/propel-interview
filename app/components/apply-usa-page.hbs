@@ -1,0 +1,30 @@
+<div class="apply-usa-page__background"></div>
+<div class="apply-usa-page__content">
+  <div class="apply-usa-page__main-section">
+    <h1>{{this.headerText}}</h1>
+    <form class="apply-usa-page__form">
+      <XSelect @value={{this.selectedLocation}}
+               @onChange={{this.onStateSelected}} as |xs|>
+        {{#each this.allStatesAndTerritories as |location|}}
+          <xs.option @value={{location.firstObject}}>{{location.lastObject}}</xs.option>
+        {{/each}}
+      </XSelect>
+      <button class="apply-usa-page__form__submit-button"
+              {{on "click" this.showLoadingSpinner}}>
+        Get Started
+      </button>
+    </form>
+
+  </div>
+  <div class="apply-usa-page__fine-print">
+    <p>This site connects you to applications in your state. Applications also support Medicaid, Medical Services, and TANF.</p>
+  </div>
+</div>
+
+{{#if this.shouldShowLoadingSpinner}}
+  <div class="apply-usa-page__loading-container">
+    <div class="apply-usa-page__loading-spinner">
+      <img class="apply-usa-page__loading-spinner__image" src="/images/spinner.png"/>
+    </div>
+  </div>
+{{/if}}
